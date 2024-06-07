@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/logo_small.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -172,7 +172,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../Quickstart/" class="md-tabs__link">
+        <a href="../../RunningDaphneLocally/" class="md-tabs__link">
           
   
   Users
@@ -448,27 +448,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quickstart/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Quickstart
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../RunningDaphneLocally/" class="md-nav__link">
         
   
@@ -521,10 +500,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -535,8 +514,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             DaphneDSL
           </label>
@@ -632,10 +611,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -646,8 +625,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             DaphneLib
           </label>
@@ -922,10 +901,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -936,8 +915,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
@@ -1494,8 +1473,10 @@ However, as the methods largely map to DaphneDSL built-in functions, you can fin
 <h3 id="daphnecontext-api-reference"><code>DaphneContext</code> API Reference</h3>
 <p><strong>Importing data from other Python libraries:</strong></p>
 <ul>
-<li><strong><code>from_numpy</code></strong><code>(mat: np.array, shared_memory=True) -&gt; Matrix</code></li>
-<li><strong><code>from_pandas</code></strong><code>(df: pd.DataFrame) -&gt; Frame</code></li>
+<li><strong><code>from_numpy</code></strong><code>(mat: np.array, shared_memory=True, verbose=False) -&gt; Matrix</code></li>
+<li><strong><code>from_pandas</code></strong><code>(df: pd.DataFrame, shared_memory=True, verbose=False, keepIndex=False) -&gt; Frame</code></li>
+<li><strong><code>from_tensorflow</code></strong><code>(tensor: tf.Tensor, shared_memory=True, verbose=False, return_shape=False) -&gt; Matrix</code></li>
+<li><strong><code>from_pytorch</code></strong><code>(tensor: torch.Tensor, shared_memory=True, verbose=False, return_shape=False) -&gt; Matrix</code></li>
 </ul>
 <p><strong>Generating data in DAPHNE:</strong></p>
 <ul>
@@ -1510,6 +1491,10 @@ However, as the methods largely map to DaphneDSL built-in functions, you can fin
 <ul>
 <li><strong><code>readMatrix</code></strong><code>(file:str) -&gt; Matrix</code></li>
 <li><strong><code>readFrame</code></strong><code>(file:str) -&gt; Frame</code></li>
+</ul>
+<p><strong>Extended relational algebra:</strong></p>
+<ul>
+<li><strong><code>sql</code></strong><code>(query) -&gt; Frame</code></li>
 </ul>
 <h2 id="building-complex-computations">Building Complex Computations</h2>
 <p>Complex computations can be built using Python operators (see <a href="/daphne/DaphneLib/Overview">DaphneLib</a>) and using DAPHNE matrix/frame/scalar methods.
@@ -1618,6 +1603,11 @@ In the following, we describe only the latter.</p>
 <li><strong><code>ncol</code></strong><code>()</code></li>
 <li><strong><code>ncell</code></strong><code>()</code></li>
 </ul>
+<p><strong>Frame label manipulation:</strong></p>
+<ul>
+<li><strong><code>setColLabels</code></strong><code>(labels)</code></li>
+<li><strong><code>setColLabelsPrefix</code></strong><code>(prefix)</code></li>
+</ul>
 <p><strong>Reorganization:</strong></p>
 <ul>
 <li><strong><code>cbind</code></strong><code>(other)</code></li>
@@ -1626,12 +1616,18 @@ In the following, we describe only the latter.</p>
 </ul>
 <p><strong>Extended relational algebra:</strong></p>
 <ul>
+<li><strong><code>registerView</code></strong><code>(table_name: str)</code></li>
 <li><strong><code>cartesian</code></strong><code>(other)</code></li>
+<li><strong><code>innerJoin</code></strong><code>(right_frame, left_on, right_on)</code></li>
 </ul>
 <p><strong>Input/output:</strong></p>
 <ul>
 <li><strong><code>print</code></strong><code>()</code></li>
 <li><strong><code>write</code></strong><code>(file: str)</code></li>
+</ul>
+<p><strong>Conversions, casts, and copying:</strong></p>
+<ul>
+<li><strong><code>toMatrix</code></strong><code>(value_type="f64") -&gt; Matrix</code></li>
 </ul>
 <h3 id="scalar-api-reference"><code>Scalar</code> API Reference</h3>
 <p><strong>Elementwise unary:</strong></p>
@@ -1779,7 +1775,13 @@ User-defined functions can manipulate matrices, frames, and scalars, too.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
